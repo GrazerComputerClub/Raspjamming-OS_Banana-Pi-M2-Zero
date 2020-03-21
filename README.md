@@ -1,5 +1,5 @@
 # Banana-Pi-M2-Zero
-Boot files for  Banana Pi M2 Zero (BPI-M2 Zero)
+Raspjamming OS files for supporting Banana Pi M2 Zero (BPI-M2 Zero) 
 
 
 Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal for providing the original data.
