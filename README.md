@@ -6,7 +6,7 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 ## Specification:
 
-* Alwinner H2+ SoC (4x Cortex-A7 @ 1008 MHz)
+* Allwinner H2+ SoC (4x Cortex-A7)
 * 512 MB DDR3
 * Wifi 2,4 GHz, 802.11b/g/n single-band radio (65 Mps)
 * Bluetooth 4.0 (BLE)
@@ -18,17 +18,25 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 ## Links
 
-* [U-Boot](https://linux-sunxi.org/U-Boot)
-* [U-Boot: Quick reference](https://mediawiki.compulab.com/index.php/U-Boot:_Quick_reference)
-* [Kernel arguments](https://linux-sunxi.org/Kernel_arguments)
-* [Getting Started with M2 Zero](http://wiki.banana-pi.org/Getting_Started_with_M2_Zero)
+[U-Boot](https://linux-sunxi.org/U-Boot)  
+[U-Boot: Quick reference](https://mediawiki.compulab.com/index.php/U-Boot:_Quick_reference)  
+[Kernel arguments](https://linux-sunxi.org/Kernel_arguments)  
+[Getting Started with M2 Zero](http://wiki.banana-pi.org/Getting_Started_with_M2_Zero)  
 
 
-## Status
+## Status Raspjamming OS
 
 Kernel: 4.19.12  
+ARM-CPU clock speed: 120 - 1008 MHz  
+Active cores: 4  
+GPU Memory: 16 MB  
+Memory: 496 MB  
+
+
+To do list:
 * USB Ethernet gadget: OK
 * Wifi: OK
+* ACT-LED: NOK
 * WiringPi: NOK
 * RPi.GPIO: NOK
 * SPI1 - CS0 & CS1: NOK
