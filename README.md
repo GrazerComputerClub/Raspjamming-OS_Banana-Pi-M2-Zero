@@ -13,6 +13,6 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 ## Status
 
-Kernel: 4.19.12
-USB Ethernet gadget: OK
-Wifi: NOK
+Kernel: 4.19.12  
+* USB Ethernet gadget: OK
+* Wifi: NOK
