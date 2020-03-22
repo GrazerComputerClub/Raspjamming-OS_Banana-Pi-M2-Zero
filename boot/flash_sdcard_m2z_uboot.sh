@@ -59,7 +59,8 @@ sleep 2
 
 set -e
 pt_warn "Flashing $out...."
-dd if=./bootloader_m2z_v2.bin conv=notrunc bs=1k seek=8 of=$out
+dd if=./bootloader_uboot.bin conv=notrunc bs=1k seek=8 of=$out
+# old name was bootloader_m2z_v2.bin from https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal 
 
 sync
 pt_ok "Finished flashing uboot $out!"
