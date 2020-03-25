@@ -1,15 +1,15 @@
 # Banana-Pi-M2-Zero
 Raspjamming OS files for supporting Banana Pi M2 Zero (BPI-M2 Zero) 
 
-
 Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal for providing the original data.
 
-## Specification:
+## Specification
 
 * Allwinner H2+ SoC (4x Cortex-A7)
 * 512 MB DDR3
 * Wifi 2,4 GHz, 802.11b/g/n single-band radio (65 Mps)
 * Bluetooth 4.0 (BLE)
+* 40 Pin GPIO + UART
 
 ## Datasheet:
 
@@ -23,6 +23,19 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 [Kernel arguments](https://linux-sunxi.org/Kernel_arguments)  
 [Getting Started with M2 Zero](http://wiki.banana-pi.org/Getting_Started_with_M2_Zero)  
 
+
+## Project goal
+
+* Get as near as possible to Raspbbery Pi Zero W (replacement)
+* 100% GPIO compatible to Raspberry Pi
+* Support GC2-xHAT
+* Support USB-HAT
+
+**unlikely/impossible:**
+
+* Support xGame-HAT
+* Audio out via GPIO-PWM
+* I2S
 
 ## Status Raspjamming OS
 
@@ -44,9 +57,10 @@ Memory: 496 MB
 * ACT-LED: OK
 * WiringPi: NOK
 * RPi.GPIO: NOK
-* SPI1 - CS0 & CS1: NOK
-* RS232 (UART3): need test
-* Remove UART2: OK
+* SPI0 - CS0 & CS1: OK
+* GPIO RS232 (UART3): OK (Console)
+* Remove UART2: OK?
+* Remove UART0: OK (Console)
 
 **Consumption:**  
 Idle  : 140 mA  
@@ -57,4 +71,7 @@ Idle  : 140 mA
 1008 MHz ... 5,868  
  960 MHz ... 5,602  
  816 MHz ... 4,762
- 
+
+Pi 2 900 MHz     ... 5,2  
+Pi Zero 1150 MHz ... 4,662  
+Pi Zero 1000 MHz ... 4,010
