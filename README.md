@@ -61,7 +61,7 @@ Memory: 496 MB
 * GPIO RS232 (UART3): OK (Console)
 * Remove UART2: OK?
 * Remove UART0: OK (Console)
-* GPIO UART: need test
+* GPIO UART: OK
 * GPIO SPI0, cs0, cs1: need test
 * GPIO I2C: need test
 * GPIO I/O: need test
