@@ -66,10 +66,10 @@ Memory: 496 MB
 * GPIO I2C: need test
 * GPIO I/O: need test
 
-**Consumption:**  
-Idle  : 140 mA  
+**Consumption & temperature (22 °C ambient):**  
+Idle  : 140 mA (47 °C)
 1-core: 260 mA (60 °C)  
-2-core: 320 mA (70 °C, max. CPU temperature, CPU freq. adjustment active)  
+2-core: 320 mA (70 °C, max. CPU temperature, CPU freq. adjustment active 816-1008)  
 
 **nBench mean value:**  
 1008 MHz ... 5,868  
