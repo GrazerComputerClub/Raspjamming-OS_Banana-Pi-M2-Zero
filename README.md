@@ -33,7 +33,7 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 **unlikely/impossible:**
 
-* Support xGame-HAT
+* Support Pi-XO, xGame0-HAT
 * Audio out via GPIO-PWM
 * I2S
 
