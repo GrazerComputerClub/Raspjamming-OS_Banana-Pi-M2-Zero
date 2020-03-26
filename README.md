@@ -68,16 +68,29 @@ Memory: 496 MB
 
 ## Measurements
 
-**Consumption & temperature (22 °C ambient):**  
+### Consumption & temperature (22 °C ambient):  
+
+**Banana Pi M2 Zero**  
+
 Idle           : 140 mA (47 °C)  
 1-core (stress): 260 mA (60 °C)  
 2-core (stress): 320 mA (70 °C, max. CPU temperature, CPU freq. adjustment active 816-1008)  
 
-**nBench mean value:**  
-BPi Zero, 1008 MHz: 5,868  
-BPi Zero,  960 MHz: 5,602  
-BPi Zero,  816 MHz: 4,762  
+**Raspberry Pi Zero W**  
 
-Pi 2    ,  900 MHz: 5,2  
-Pi Zero , 1150 MHz: 4,662  
-Pi Zero , 1000 MHz: 4,010  
+Idle           : 110 mA (38 °C)  
+1-core (stress): 190 mA (45 °C)  
+
+### CPU Performance (nBench mean value):  
+
+**Banana Pi M2 Zero**  
+
+1008 MHz: 5,868  
+960 MHz: 5,602  
+816 MHz: 4,762  
+
+**Raspberry Pi**  
+
+Pi 2 ,  900 MHz: 5,2  
+Pi Zero, 1150 MHz: 4,662  
+Pi Zero, 1000 MHz: 4,010  
