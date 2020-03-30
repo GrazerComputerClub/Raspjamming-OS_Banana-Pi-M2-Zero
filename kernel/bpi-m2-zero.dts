@@ -476,7 +476,6 @@
 			};
 
 			spi0 {
-/*				pins = "PC0\0PC1\0PC2\0PC3\0PC7"; */
 				pins = "PC0\0PC1\0PC2\0PC3";
 				function = "spi0";
 				phandle = < 0x15 >;
@@ -486,7 +485,8 @@
 				pins = "PA15\0PA16\0PA14\0PA13";
 				function = "spi1";
 				phandle = < 0x17 >;
-			};*/
+			};
+*/
 
 			uart0 {
 				pins = "PA4\0PA5";
@@ -565,7 +565,7 @@
 			interrupts = < 0x00 0x12 0x04 0x00 0x13 0x04 >;
 			clocks = < 0x0f >;
 		};
-
+/* eth0 */
 		ethernet@1c30000 {
 			compatible = "allwinner,sun8i-h3-emac";
 			syscon = < 0x11 >;
@@ -578,7 +578,6 @@
 			clock-names = "stmmaceth";
 			#address-cells = < 0x01 >;
 			#size-cells = < 0x00 >;
-/*			status = "okay";  */
 			status = "disable";
 			phy-handle = < 0x12 >;
 			phy-mode = "mii";
@@ -620,7 +619,7 @@
 				};
 			};
 		};
-
+/*SPI0*/
 		spi@1c68000 {
 			compatible = "allwinner,sun8i-h3-spi";
 			reg = < 0x1c68000 0x1000 >;
@@ -632,19 +631,10 @@
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x15 0x16 >;
 			resets = < 0x03 0x0f >;
-/*			status = "disabled"; */
 			status = "okay";
 			#address-cells = < 0x01 >;
 			#size-cells = < 0x00 >;
 			cs-gpios = < 0x0c 0x02 0x03 0x00 0x0c 0x00 0x06 0x00 >;
-/*
-			spidev {
-				compatible = "spidev";
-				status = "okay";
-				reg = <0>;
-				spi-max-frequency = <1000000>;
-			};
-*/
 
 			spi@0 {
 				compatible = "nanopi,spidev";
@@ -850,7 +840,6 @@
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x1c >;
 		};
-
 /* Bluetooth */
 		serial@1c28400 {
 			compatible = "snps,dw-apb-uart";
@@ -880,7 +869,6 @@
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x1f >;
 		};
-
 /* GPIO */
 		serial@1c28c00 {
 			compatible = "snps,dw-apb-uart";
@@ -892,7 +880,6 @@
 			resets = < 0x03 0x34 >;
 			dmas = < 0x14 0x09 0x14 0x09 >;
 			dma-names = "rx\0tx";
-			/*status = "disabled";*/
 			status = "okay";
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x20 >;
@@ -1382,6 +1369,7 @@
 		serial0 = "/soc/serial@1c28000";
 		serial1 = "/soc/serial@1c28400";
 */
+/* serial order GPIO, Bluetooth, Debug UART*/
 		serial0 = "/soc/serial@1c28c00";
 		serial1 = "/soc/serial@1c28400";
 		serial2 = "/soc/serial@1c28000";
@@ -1512,8 +1500,7 @@
 
 		sw4 {
 			label = "power";
-	/*		linux,code = < 0x74 >; */
-			linux,code = < 0x1c >;
+			linux,code = < 0x74 >; 
 			gpios = < 0x0e 0x00 0x03 0x01 >;
 		};
 	};
