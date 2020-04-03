@@ -53,6 +53,7 @@ Memory: 496 MB
 
 **To do list:**
 * USB Ethernet gadget: OK
+* USB client: NOK
 * Wifi: OK
 * ACT-LED: OK
 * WiringPi: under develop
