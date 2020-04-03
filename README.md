@@ -55,9 +55,10 @@ Memory: 496 MB
 * USB Ethernet gadget: OK
 * Wifi: OK
 * ACT-LED: OK
-* WiringPi: NOK
+* WiringPi: under develop
 * RPi.GPIO: NOK
-* SPI0 - CS0 & CS1: OK
+* SPI0 - CS0: OK
+* SPI0 - CS1: NOK (software workaround?)
 * GPIO RS232 (UART3): OK (Console)
 * Remove UART2: OK?
 * Remove UART0: OK (Console)
@@ -65,6 +66,9 @@ Memory: 496 MB
 * GPIO SPI0, cs0, cs1: need test
 * GPIO I2C: need test
 * GPIO I/O: need test
+* 4K Console: OK
+* 4K X-Windows: OK (CPU overheating >77°C at idle)
+* Force HDMI: NOK
 
 ## Measurements
 
