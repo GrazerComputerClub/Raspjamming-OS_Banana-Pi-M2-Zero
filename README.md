@@ -76,9 +76,12 @@ Memory: 496 MB
 
 **Banana Pi M2 Zero**  
 
+Console/no Video:  
 Idle           : 140 mA (47 °C)  
 1-core (stress): 260 mA (60 °C)  
-2-core (stress): 320 mA (70 °C, max. CPU temperature, CPU freq. adjustment active 816-1008)  
+2-core (stress): 320 mA (70 °C, max. CPU temperature, CPU freq. adjustment active 816-1008 MHz)  
+4K X-Windows:  
+Idle           : 350 mA (77 °C, CPU overheated, CPU freq. adjustment active 120 MHz)  
 
 **Raspberry Pi Zero W**  
 
