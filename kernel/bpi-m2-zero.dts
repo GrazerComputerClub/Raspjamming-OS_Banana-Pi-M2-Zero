@@ -634,7 +634,7 @@
 			status = "okay";
 			#address-cells = < 0x01 >;
 			#size-cells = < 0x00 >;
-			cs-gpios = < 0x0c 0x02 0x03 0x00 0x0c 0x00 0x06 0x00 >;
+			cs-gpios = < 0x0c 0x02 0x03 0x00 0x0c 0x02 0x07 0x00 >;
 
 			spi@0 {
 				compatible = "nanopi,spidev";
@@ -1379,6 +1379,7 @@
 		spi0 = "/soc/spi@1c68000";
 /*		spi1 = "/soc/spi@1c69000";  */
 		spidev0 = "/soc/spi@1c68000/spi@0";
+		spidev1 = "/soc/spi@1c68000/spi@1";
 		spiflash = "/soc/spi@1c68000/spiflash@0";
 		pitft = "/soc/spi@1c68000/pitft@0";
 		pitft_ts = "/soc/spi@1c68000/pitft-ts@1";
