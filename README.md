@@ -33,10 +33,11 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 **unlikely/impossible:**
 
-* Support Pi-XO, xGame0-HAT
+* Hardware PWM
 * Audio out via GPIO-PWM
 * I2S
 * Camera
+* Support Pi-XO, xGame0-HAT
 
 ## Status Raspjamming OS
 
@@ -63,10 +64,9 @@ Memory: 496 MB
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
 * BT UART: unknown (visible as UART1)
 * GPIO RS232 (UART3): OK (visible as UART0, Kernel Messages, Console)
-* GPIO SPI0 - CS0: OK
-* GPIO SPI0 - CS1: NOK (software workaround?, wiringpi only supports CS0)
-* GPIO I2C: need test
-* GPIO I/O: OK (WiringPi 2.60.200326) 
+* GPIO SPI0 - CS0 & CS1: OK
+* GPIO I2C-1 (400 kHz): OK
+* GPIO I/O: OK (WiringPi 2.60.200413) 
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle)
 * Force HDMI 720p Resolution: NOK
