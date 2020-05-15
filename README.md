@@ -58,17 +58,21 @@ Memory: 496 MB
 * USB client: OK
 * WiFi: OK
 * ACT-LED: OK
-* WiringPi: under develop
-* RPi.GPIO: under develop
+* GPIO Librarys (tools)
+  * WiringPi: OK
+  * RPi.GPIO (python2): untested  
+  * RPi.GPIO (python3): OK
+  * gpiozero (python3): OK
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
 * BT UART: unknown (visible as UART1)
-* GPIO RS232 (UART3): OK (visible as UART0, Kernel Messages, Console)
-* GPIO SPI0 - CS0 & CS1: OK
-* GPIO I2C-1 (400 kHz): OK
-* GPIO I/O: OK (WiringPi 2.60.200413) 
+* GPIO
+  * GPIO RS232 (UART3): OK (visible as UART0, Kernel Messages, Console)
+  * GPIO SPI0 - CS0 & CS1: OK
+  * GPIO I2C-1 (400 kHz): OK
+  * GPIO I/O: OK (WiringPi 2.60.200413) 
 * 4K Console: OK 
-* 4K X-Windows: OK (CPU overheating >77°C at idle)
+* 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: NOK
 * Shutdown button: NOK 
 
