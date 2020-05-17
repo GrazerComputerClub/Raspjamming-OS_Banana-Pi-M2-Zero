@@ -1,6 +1,24 @@
-# Banana-Pi-M2-Zero
-Raspjamming OS files for supporting Banana Pi M2 Zero (BPI-M2 Zero) 
 
+# Raspjamming-Image for Banana Pi M2 Zero
+
+![Raspjamming login screen](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/raspjamming20.05_bananapi.png)
+
+
+## Decription
+
+Raspjamming is a Raspbian lite based linux distribution for use at Raspberry Pi jams. Especially for use with [Raspjamming](https://raspjamming.gc2.at/) Event, organised from the [GC2 - Grazer Computer Club](https://gc2.at). 
+
+## Main features
+see [releases](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/releases)
+
+## Download
+
+Go to [releases](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/releases) to download compressed image and use [etcher](https://www.balena.io/etcher) for Linux or [Rufus](https://rufus.ie) for Windows to write it to the sd card. 
+After forst boot expand filesystem with 'sudo raspi-config' (7 Advance Options -> A1 Expand Filesystem).
+
+
+# Banana-Pi-M2-Zero
+Repository contains Raspjamming OS files for supporting Banana Pi M2 Zero (BPI-M2 Zero) 
 Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal for providing the original kernel data.
 
 ## Specification
