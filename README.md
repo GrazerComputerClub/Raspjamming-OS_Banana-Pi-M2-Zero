@@ -94,6 +94,8 @@ Memory: 496 MB
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: NOK
 * Shutdown button (PL3 - Pin355): NOK (pin ist not set correctly to input after boot, active low!) 
+* Device-Tree at shell: NOK (new Kernel needed)  
+* User GPIO access: NOK (new Kernel needed)  
 
 ## Pin access via sysfs
 
