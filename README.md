@@ -29,8 +29,9 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 * Bluetooth 4.0 (BLE)
 * 40 Pin GPIO + UART
 
-## Datasheet:
+## Datasheets and Shematic:
 
+[BPi-M2-Zero schematic](https://drive.google.com/file/d/0B4PAo2nW2KfnMW5sVkxWSW9qa28/view)  
 [Allwinner H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf)  
 [AP6212 WiFi+BT](http://wiki.friendlyarm.com/wiki/images/5/57/AP6212_V1.1_09022014.pdf)  
 
@@ -92,7 +93,19 @@ Memory: 496 MB
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: NOK
-* Shutdown button: NOK 
+* Shutdown button (PL3 - Pin355): NOK (pin ist not set correctly to input after boot, active low!) 
+
+## Pin access via sysfs
+
+[https://linux-sunxi.org/GPIO](https://linux-sunxi.org/GPIO)  
+
+(position of letter in alphabet - 1) * 32 + pin number  
+PL3 = (12-1) *32 + 3 = 355  
+
+echo 355 > /sys/class/gpio/export  
+echo "in" > /sys/class/gpio/gpio355/direction  
+cat /sys/class/gpio/gpio355/value  
+
 
 ## Measurements
 
