@@ -1,5 +1,11 @@
-## Update deb package (devicetree config)
+## Compile dtb file (devicetree config)
 
+```
+sudo dtc -I dts -O dtb bpi-m2-zero.dts -o bpi-m2-zero.dtb
+```
+
+
+## Update deb package (devicetree config)
 
 ```
 mkdir -p deb/DEBIAN
