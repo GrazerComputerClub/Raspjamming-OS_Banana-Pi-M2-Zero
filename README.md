@@ -6,15 +6,15 @@
 
 ## Decription
 
-Raspjamming is a Raspbian lite based linux distribution for use at Raspberry Pi jams. Especially for use with [Raspjamming](https://raspjamming.gc2.at/) Event, organised from the [GC2 - Grazer Computer Club](https://gc2.at). 
+Raspjamming OS is a Raspberry Pi OS (32-bit) Lite based linux distribution for use at Raspberry Pi jams. Especially for use with [Raspjamming-Event](https://raspjamming.gc2.at/), organised from the [GC2 - Grazer Computer Club](https://gc2.at). 
 
 ## Main features
-see [releases](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/releases)
+see [releases](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/releases)
 
 ## Download
 
-Go to [releases](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/releases) to download compressed image and use [etcher](https://www.balena.io/etcher) for Linux or [Rufus](https://rufus.ie) for Windows to write it to the sd card. 
-After forst boot expand filesystem with 'sudo raspi-config' (7 Advance Options -> A1 Expand Filesystem).
+Go to [releases](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/releases) to download compressed image and use [etcher](https://www.balena.io/etcher) for Linux or [Rufus](https://rufus.ie) for Windows to write it to sd card. 
+After first boot expand filesystem with 'sudo raspi-config' (7 Advance Options -> A1 Expand Filesystem).
 
 
 # Banana-Pi-M2-Zero
@@ -29,7 +29,7 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 * Bluetooth 4.0 (BLE)
 * 40 Pin GPIO + UART
 
-## Datasheets and Shematic:
+## Datasheets and schematic
 
 [BPi-M2-Zero schematic](https://drive.google.com/file/d/0B4PAo2nW2KfnMW5sVkxWSW9qa28/view)  
 [Allwinner H2+](http://wiki.friendlyarm.com/wiki/images/0/08/Allwinner_H2%2B_Datasheet_V1.2.pdf)  
@@ -79,8 +79,10 @@ Memory: 496 MB
 * ACT-LED: OK
 * GPIO Librarys (tools)
   * WiringPi: OK
+  * WiringPi - ISR: untested, missing?
   * RPi.GPIO (python2): untested  
   * RPi.GPIO (python3): OK
+  * RPi.GPIO (python3) - Event: untested, missing?
   * gpiozero (python3): OK
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
@@ -90,10 +92,12 @@ Memory: 496 MB
   * GPIO SPI0 - CS0 & CS1: OK
   * GPIO I2C-1 (400 kHz): OK
   * GPIO I/O: OK (WiringPi 2.60.200413) 
+  * GPIO init: **NOK** (GPIOs not set correctly to input mode after boot)
+  * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default) 
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: NOK
-* Shutdown button (PL3 - Pin355): NOK (pin ist not set correctly to input after boot, active low!) 
+* Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, active low!) 
 * Device-Tree at shell: NOK (new Kernel needed)  
 * User GPIO access: NOK (new Kernel needed)  
 
