@@ -2,7 +2,7 @@
 
 The following librarys and tools are modified BPi versions of the tools.  
 They are combined with the latest Raspberry Pi versions and can support both words. Some bugs are fixed and they are now using devicetree for board detection.  
-But be aware we do not provide support and we have limited the testing capacitiy. So some features are still missing and there are maybe some more bugs.
+But be aware we do not provide support and we have limited testing capacitiy. So some features are still missing and there are maybe some more bugs.
 
 
 ## WiringPi
