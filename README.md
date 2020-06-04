@@ -96,7 +96,7 @@ Memory: 496 MB
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default) 
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
-* Force HDMI 720p Resolution: NOK
+* Force HDMI 720p Resolution: **NOK**
 * Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, active low!) 
 * Device-Tree at shell: NOK (new Kernel needed)  
 * User GPIO access: NOK (new Kernel needed)  
@@ -144,3 +144,5 @@ Idle           : 110 mA (38 °C)
 Pi 2 ,  900 MHz: 5,2  
 Pi Zero, 1150 MHz: 4,662  
 Pi Zero, 1000 MHz: 4,010  
+
+for more benchmark results please see github [Benchmark](https://github.com/GrazerComputerClub/Benchmark) repro
