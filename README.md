@@ -146,3 +146,23 @@ Pi Zero, 1150 MHz: 4,662
 Pi Zero, 1000 MHz: 4,010  
 
 for more benchmark results please see github [Benchmark](https://github.com/GrazerComputerClub/Benchmark) repro
+
+## Read HAT
+
+```
+i2cdump -y 0 0x50 c  
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef  
+00: 52 2d 50 69 01 00 02 00 8c 00 00 00 01 00 00 00    R-Pi?.?.?...?...  
+10: 50 00 00 00 01 dc 73 71 97 89 f3 91 3a 40 5f 8c    P...??sq????:@_?  
+20: 00 75 ec 91 20 6c 00 01 1e 1a 47 72 61 7a 65 72    .u?? l.???Grazer  
+30: 20 43 6f 6d 70 75 74 65 72 20 43 6c 75 62 20 28     Computer Club (  
+40: 41 75 73 74 72 69 61 29 47 43 32 2d 78 48 41 54    Austria)GC2-xHAT  
+50: 20 28 52 61 73 70 6a 61 6d 6d 69 6e 67 20 48 41     (Raspjamming HA  
+60: 54 29 de f1 02 00 01 00 20 00 00 00 00 00 00 00    T)???.?. .......  
+70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................  
+80: 00 00 00 00 00 00 00 00 00 00 ed 6e 00 00 00 00    ..........?n....  
+```
+
+0x28 ... length organisation  
+0x29 ... length product  
+0x2A ... organisation & product
