@@ -80,10 +80,12 @@ Memory: 496 MB
 * GPIO Librarys (tools)
   * WiringPi: OK
   * WiringPi - ISR: untested, missing?
+  * C# - WiringPi wrapper: untested 
   * RPi.GPIO (python2): untested  
   * RPi.GPIO (python3): OK
   * RPi.GPIO (python3) - Event: untested, missing?
   * gpiozero (python3): OK
+  * libgpiod: untested
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
 * BT UART: unknown (visible as UART1)
@@ -99,8 +101,12 @@ Memory: 496 MB
 * Force HDMI 720p Resolution: **NOK**
 * Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, active low!) 
 * Device-Tree at shell: NOK (new Kernel needed)  
-* User GPIO access: NOK (new Kernel needed)  
-
+* User GPIO access: NOK (new Kernel needed)
+* Application tests:
+  * mplayer
+  * emulators (Gamebatte, PicoDrive)
+  * armbianmonitor
+  
 ## Pin access via sysfs
 
 [https://linux-sunxi.org/GPIO](https://linux-sunxi.org/GPIO)  
