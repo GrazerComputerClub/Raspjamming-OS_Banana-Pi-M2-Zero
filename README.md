@@ -95,7 +95,8 @@ Memory: 496 MB
   * GPIO I2C-1 (400 kHz): OK
   * GPIO I/O: OK (WiringPi 2.60.200413) 
   * GPIO init: **NOK** (GPIOs not set correctly to input mode after boot)
-  * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default) 
+  * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
+  * GPIO Event/ISR: OK (only pins <64 supported) 
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: **NOK**
@@ -117,6 +118,14 @@ PL3 = (12-1) *32 + 3 = 355
 echo 355 > /sys/class/gpio/export  
 echo "in" > /sys/class/gpio/gpio355/direction  
 cat /sys/class/gpio/gpio355/value  
+
+### strange behavior (sysfs and wringpi)
+
+``echo 0 > /sys/class/gpio/export``  
+``echo "in" > /sys/class/gpio/gpio0/direction``  changes wiringpi GPIO Mode to 'IN'  
+``cat /sys/class/gpio/gpio0/value``  changes wiringpi GPIO Mode to 'ALT2'  
+It looks like wiringPi can not read wenn Mode 'ALT2' is active (always zero).  
+**This creates following error:** If event/ISR is activated on GPIO, reading the input is not possible anymore.
 
 
 ## Measurements
