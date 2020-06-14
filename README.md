@@ -70,7 +70,7 @@ Memory: 496 MB
 * Ethernet (eth0)
 * 2-Cores
 * SPI1
-* UART2 (GPIO)
+* UART2 (GPIO) - to do - need dtd update
 
 **To do list:**
 * USB ethernet gadget: OK
@@ -99,15 +99,15 @@ Memory: 496 MB
   * GPIO Event/ISR: OK (only pins <64 supported) 
 * GC2xHAT: 
   * HC-SR04 - C/C#: OK
-  * HC-SR04 - Python: NOK (event missing)
+  * HC-SR04 - gpiozero(Python3): NOK (event missing)
   * 3xSwitch: OK
   * LEDs: OK
-  * TM1637: ?
-  * Power 3.3V: OK (but defualt on)
+  * TM1637: ? (hardware defect)
+  * Power 3.3V: OK (but default on, rpi default off)
   * DHT: NOK (reason unknown)
-  * ATMEGA: ?
+  * ATMEGA: ? (gpio mode 6 out, gpio write 6 1 ... programming, diagnose) 
   * ESP01: ?
-  * AM2320.py: NOK ('board not supported' error
+  * AM2320.py: NOK ('board not supported' error)
   * HAT EEPROM: NOK (manuel implementation needed)  
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
@@ -118,7 +118,8 @@ Memory: 496 MB
 * Application tests:
   * mplayer: OK
   * emulator Gamebatte: OK 
-  * emulator PicoDrive: NOK (error: failed to open vchiq instance: Need to recompile or ssh X error?)
+  * emulator PicoDrive: OK
+  * PICO-8 (inkl. GPIO): ?
   * armbianmonitor: OK
   
 ## Pin access via sysfs
