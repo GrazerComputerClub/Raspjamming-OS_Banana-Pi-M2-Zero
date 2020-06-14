@@ -97,6 +97,18 @@ Memory: 496 MB
   * GPIO init: **NOK** (GPIOs not set correctly to input mode after boot)
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
   * GPIO Event/ISR: OK (only pins <64 supported) 
+* GC2xHAT: 
+  * HC-SR04 - C/C#: OK
+  * HC-SR04 - Python: NOK (event missing)
+  * 3xSwitch: OK
+  * LEDs: OK
+  * TM1637: ?
+  * Power 3.3V: OK (but defualt on)
+  * DHT: NOK (reason unknown)
+  * ATMEGA: ?
+  * ESP01: ?
+  * AM2320.py: NOK ('board not supported' error
+  * HAT EEPROM: NOK (manuel implementation needed)  
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: **NOK**
@@ -104,9 +116,10 @@ Memory: 496 MB
 * Device-Tree at shell: NOK (new Kernel needed)  
 * User GPIO access: NOK (new Kernel needed)
 * Application tests:
-  * mplayer
-  * emulators (Gamebatte, PicoDrive)
-  * armbianmonitor
+  * mplayer: OK
+  * emulator Gamebatte: OK 
+  * emulator PicoDrive: NOK (error: failed to open vchiq instance: Need to recompile or ssh X error?)
+  * armbianmonitor: OK
   
 ## Pin access via sysfs
 
