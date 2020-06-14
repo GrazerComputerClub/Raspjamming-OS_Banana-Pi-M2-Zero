@@ -77,14 +77,15 @@ Memory: 496 MB
 * USB client: OK
 * WiFi: OK
 * ACT-LED: OK
+* Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, maybe edge mode? active low!) 
 * GPIO Librarys (tools)
   * WiringPi: OK
   * WiringPi - ISR: untested, missing?
   * C# - WiringPi wrapper: untested 
   * RPi.GPIO (python2): untested  
   * RPi.GPIO (python3): OK
-  * RPi.GPIO (python3) - Event: untested, missing?
-  * gpiozero (python3): OK
+  * RPi.GPIO (python3) - Event: **NOK** (not implemented)
+  * gpiozero (python3): OK (but events not working)
   * libgpiod: untested
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
@@ -96,7 +97,7 @@ Memory: 496 MB
   * GPIO I/O: OK (WiringPi 2.60.200413) 
   * GPIO init: **NOK** (GPIOs not set correctly to input mode after boot)
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
-  * GPIO Event/ISR: OK (only pins <64 supported) 
+  * GPIO Event/ISR: OK
 * GC2xHAT: 
   * HC-SR04 - C/C#: OK
   * HC-SR04 - gpiozero(Python3): NOK (event missing)
@@ -112,7 +113,6 @@ Memory: 496 MB
 * 4K Console: OK 
 * 4K X-Windows: OK (CPU overheating >77°C at idle, unuseable)
 * Force HDMI 720p Resolution: **NOK**
-* Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, active low!) 
 * Device-Tree at shell: NOK (new Kernel needed)  
 * User GPIO access: NOK (new Kernel needed)
 * Application tests:
