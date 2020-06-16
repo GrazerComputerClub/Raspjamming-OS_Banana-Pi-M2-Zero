@@ -99,14 +99,14 @@ Memory: 496 MB
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
   * GPIO Event/ISR: OK
 * GC2xHAT: 
-  * HC-SR04 - C/C#: OK
+  * HC-SR04 - C/C#: NOK(**ToDo**: HC-SR04 (usr/local/bin/ need new version on image!, C# wiringPiISR: feature not supported (27))
   * HC-SR04 - gpiozero(Python3): NOK (event missing)
   * 3xSwitch: OK
   * LEDs: OK
-  * TM1637: ? (hardware defect)
+  * TM1637: OK (some errors)(**ToDo**: ShowIP need user root systemd on image!)
   * Power 3.3V: OK (but default on, rpi default off)
-  * DHT: NOK (reason unknown)
-  * ATMEGA: ? (gpio mode 6 out, gpio write 6 1 ... programming, diagnose) 
+  * DHT: NOK (C# ok, C nok)
+  * ATMEGA: NOK (resetpin must be set to 2, but still reading device id wrong - spi error?) 
   * ESP01: ?
   * AM2320.py: NOK ('board not supported' error)
   * HAT EEPROM: NOK (manuel implementation needed)  
