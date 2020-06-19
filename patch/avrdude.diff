@@ -1,0 +1,12 @@
+--- /etc/avrdude.conf.bkup	2020-06-19 17:54:55.116202069 +0200
++++ /etc/avrdude.conf	2020-06-19 17:55:03.246197883 +0200
+@@ -1282,7 +1282,7 @@
+   id = "linuxspi";
+   desc = "Use Linux SPI device in /dev/spidev*";
+   type = "linuxspi";
+-  reset = 25;
+-  baudrate=400000;
++  reset = 2;
++  baudrate=200000;
+ ;
+ 
