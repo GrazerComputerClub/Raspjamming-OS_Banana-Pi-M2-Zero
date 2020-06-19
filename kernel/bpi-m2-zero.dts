@@ -855,6 +855,8 @@
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x1d 0x1e >;
 		};
+/* UART2 */
+/*
 		serial@1c28800 {
 			compatible = "snps,dw-apb-uart";
 			reg = < 0x1c28800 0x400 >;
@@ -869,6 +871,7 @@
 			pinctrl-names = "default";
 			pinctrl-0 = < 0x1f >;
 		};
+*/
 /* GPIO */
 		serial@1c28c00 {
 			compatible = "snps,dw-apb-uart";
