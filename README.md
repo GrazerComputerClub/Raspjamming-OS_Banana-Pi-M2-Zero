@@ -89,6 +89,7 @@ Memory: 496 MB
   * libgpiod: untested
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
+* BT: unknown
 * BT UART: unknown (visible as UART1)
 * GPIO
   * GPIO RS232 (UART3): OK (visible as UART0, Kernel Messages, Console)
@@ -99,11 +100,11 @@ Memory: 496 MB
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
   * GPIO Event/ISR: OK
 * GC2xHAT: 
-  * HC-SR04 - C/C#: NOK(**ToDo**: HC-SR04 (usr/local/bin/ need new version on image!, C# wiringPiISR: feature not supported (27))
+  * HC-SR04 - C/C#: NOK( C# invalid valuesa)
   * HC-SR04 - gpiozero(Python3): NOK (event missing)
   * 3xSwitch: OK
   * LEDs: OK
-  * TM1637: OK (some errors)(**ToDo**: ShowIP need user root systemd on image!)
+  * TM1637: OK (some errors)
   * Power 3.3V: OK (but default on, rpi default off)
   * DHT: NOK (C# ok, C nok)
   * ATMEGA: NOK (resetpin must be set to 2, but still reading device id wrong - spi error?) 
@@ -119,7 +120,8 @@ Memory: 496 MB
   * mplayer: OK
   * emulator Gamebatte: OK 
   * emulator PicoDrive: OK
-  * PICO-8 (inkl. GPIO): ?
+  * PICO-8: OK  
+       GPIO: NOK (sudo needed for GPIO but not starting with sudo)  
   * armbianmonitor: OK
   
 ## Pin access via sysfs
