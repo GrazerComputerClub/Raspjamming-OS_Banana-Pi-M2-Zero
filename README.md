@@ -1,7 +1,7 @@
 
 # Raspjamming-Image for Banana Pi M2 Zero
 
-![Raspjamming login screen](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/raspjamming20.05_bananapi.png)
+![Raspjamming login screen](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/RaspjammingOS20.06_BPi_M2Z.png)
 
 
 ## Decription
