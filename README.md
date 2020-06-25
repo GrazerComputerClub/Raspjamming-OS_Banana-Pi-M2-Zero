@@ -1,5 +1,5 @@
 
-# Raspjamming-Image for Banana Pi M2 Zero
+# Raspjamming OS for Banana Pi M2 Zero
 
 ![Raspjamming login screen](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/RaspjammingOS20.06_BPi_M2Z.png)
 
@@ -19,7 +19,9 @@ After first boot expand filesystem with 'sudo raspi-config' (7 Advance Options -
 
 # Banana-Pi-M2-Zero
 Repository contains Raspjamming OS files for supporting Banana Pi M2 Zero (BPI-M2 Zero) 
-Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal for providing the original kernel data.
+Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal for providing the first kernel data  
+Special thanks to https://www.armbian.com for providing Kernel 4 build system
+
 
 ## Specification
 
@@ -64,7 +66,7 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 
 ## Status Raspjamming OS
 
-Kernel: 4.19.12  
+Kernel: 4.19.129 / 4.19.12  
 ARM-CPU clock speed: 120 - 1008 MHz  
 Active cores: 2  
 GPU Memory: 16 MB  
@@ -104,7 +106,7 @@ Memory: 496 MB
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
   * GPIO Event/ISR: OK
 * GC2xHAT: 
-  * HC-SR04 - C/C#: NOK( C# invalid valuesa)
+  * HC-SR04 - C/C#: NOK (C# invalid values)
   * HC-SR04 - gpiozero(Python3): NOK (event missing)
   * 3xSwitch: OK
   * LEDs: OK
@@ -124,8 +126,7 @@ Memory: 496 MB
   * mplayer: OK
   * emulator Gamebatte: OK 
   * emulator PicoDrive: OK
-  * PICO-8: OK  
-       GPIO: NOK (sudo needed for GPIO but not starting with sudo)  
+  * PICO-8: OK
   * armbianmonitor: OK
   
 ## Pin access via sysfs
@@ -167,10 +168,10 @@ Idle           : 110 mA (38 °C)
 1-core (stress): 190 mA (45 °C)  
 
 ### CPU Performance (nBench mean value):  
-
+nbench.txt
 **Banana Pi M2 Zero**  
 
-1008 MHz: 5,868  
+1008 MHz: 5,868  [results](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/nbench.txt) 
 960 MHz: 5,602  
 816 MHz: 4,762  
 
