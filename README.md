@@ -42,6 +42,10 @@ Special thanks to https://github.com/avafinger/bananapi-zero-ubuntu-base-minimal
 [Kernel arguments](https://linux-sunxi.org/Kernel_arguments)  
 [Getting Started with M2 Zero](http://wiki.banana-pi.org/Getting_Started_with_M2_Zero)  
 
+## GPIO - numbers (WiringPi)
+
+![WiringPi gpio readall](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/BananaPiM2ZeroWiringPi.png)
+
 
 ## Project goal
 
