@@ -66,7 +66,7 @@ Special thanks to https://www.armbian.com for providing Kernel 4 build system
 
 ## Status Raspjamming OS
 
-Kernel: [4.19.129](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/screenlog_4.19.129.txt) / [4.19.12](https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero/raw/master/screenlog.txt)
+Kernel: [4.19.129](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog_4.19.129.txt) / [4.19.12](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog.txt)  
 ARM-CPU clock speed: 120 - 1008 MHz  
 Active cores: 2  
 GPU Memory: 16 MB  
