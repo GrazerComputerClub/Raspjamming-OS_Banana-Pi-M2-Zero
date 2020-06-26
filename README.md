@@ -86,8 +86,8 @@ Memory: 496 MB
 * Shutdown button (PL3 - Pin355): **NOK** (pin ist not set correctly to input after boot, maybe edge mode? active low!) 
 * GPIO Librarys (tools)
   * WiringPi: OK
-  * WiringPi - ISR: untested, missing?
-  * C# - WiringPi wrapper: untested 
+  * WiringPi - ISR: OK  
+  * C# - WiringPi wrapper: OK  
   * RPi.GPIO (python2): untested  
   * RPi.GPIO (python3): OK
   * RPi.GPIO (python3) - Event: **NOK** (not implemented)
@@ -106,13 +106,15 @@ Memory: 496 MB
   * GPIO pullup: **NOK** (Raspberry Pi, GPIO00-GPIO07 pull-up is activated default)
   * GPIO Event/ISR: OK
 * GC2xHAT: 
-  * HC-SR04 - C/C#: NOK (C# invalid values)
+  * HC-SR04 - C: OK 
+  * HC-SR04 - C#: **NOK** (invalid values)
   * HC-SR04 - gpiozero(Python3): NOK (event missing)
   * 3xSwitch: OK
   * LEDs: OK
   * TM1637: OK (some errors)
   * Power 3.3V: OK (but default on, rpi default off)
-  * DHT: NOK (C# ok, C nok)
+  * DHT - C: **NOK**
+  * DHT - C#: OK
   * ATMEGA: NOK (resetpin must be set to 2, but still reading device id wrong - spi error?) 
   * ESP01: ?
   * AM2320.py: NOK ('board not supported' error)
