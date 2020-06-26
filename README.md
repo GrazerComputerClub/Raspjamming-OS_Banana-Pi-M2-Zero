@@ -76,7 +76,7 @@ Memory: 496 MB
 * Ethernet (eth0)
 * 2-Cores
 * SPI1
-* UART2 (GPIO) - to do - need dtd update
+* UART2 (GPIO)
 
 **To do list:**
 * USB ethernet gadget: OK
