@@ -28,6 +28,6 @@ fdt set mmc${boot_mmc} boot_device <1>
 setenv disp_mode "1280x720p60"
 setenv extra "hdmi.audio=EDID:0 disp.screen0_output_mode=${disp_mode} sunxi_ve_mem_reserve=0 sunxi_g2d_mem_reserve=0 sunxi_fb_mem_reserve=16"
 # no_console_suspend consoleblank=0
-setenv bootargs "console=ttyS0,115200 earlyprintk rootfstype=ext4 root=/dev/mmcblk0p2 rw rootwait fsck.repair=${fsck.repair} panic=10 ${extra} modules-load=g_ether,brcmfmac g_ether.host_addr=00:01:02:03:04:05 g_ether.dev_addr=00:01:02:03:04:06"
+setenv bootargs "console=ttyS0,115200 earlyprintk rootfstype=ext4 root=/dev/mmcblk0p2 rw rootwait fsck.repair=${fsck.repair} panic=10 ${extra} modules-load=g_ether,brcmfmac g_ether.host_addr=00:01:02:03:04:05 g_ether.dev_addr=00:01:02:03:04:06 g_ether.use_eem=0 g_ether.iManufacturer=RaspjammingOS"
 bootz ${kernel_addr} ${ramdisk_addr}:${ramdisk_size} ${dtb_addr}
 
