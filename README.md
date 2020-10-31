@@ -66,7 +66,7 @@ Special thanks to https://www.armbian.com for providing Kernel 4 build system
 
 ## Status Raspjamming OS
 
-Kernel: [4.19.129](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog_4.19.129.txt) / [4.19.12](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog.txt)  
+Kernel: [4.19.129](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog_4.19.129.txt.txt) / [4.19.12](https://github.com/GrazerComputerClub/Raspjamming-OS_Banana-Pi-M2-Zero/blob/master/screenlog.txt)  
 ARM-CPU clock speed: 120 - 1008 MHz  
 Active cores: 2  
 GPU Memory: 16 MB  
@@ -90,8 +90,8 @@ Memory: 496 MB
   * C# - WiringPi wrapper: OK  
   * RPi.GPIO (python2): untested  
   * RPi.GPIO (python3): OK
-  * RPi.GPIO (python3) - Event: **NOK** (not implemented)
-  * gpiozero (python3): OK (but events not working)
+  * RPi.GPIO (python3) - Event: OK
+  * gpiozero (python3): OK
   * libgpiod: untested
 * Remove UART2: OK
 * Debug UART (UART0): OK (visible as UART2, Uboot Messages, Console)
@@ -148,7 +148,8 @@ cat /sys/class/gpio/gpio355/value
 ``echo "in" > /sys/class/gpio/gpio0/direction``  changes wiringpi GPIO Mode to 'IN'  
 ``cat /sys/class/gpio/gpio0/value``  changes wiringpi GPIO Mode to 'ALT2'  
 It looks like wiringPi can not read wenn Mode 'ALT2' is active (always zero).  
-**This creates following error:** If event/ISR is activated on GPIO, reading the input is not possible anymore.
+**This creates following error:** If event/ISR is activated on GPIO, reading the input via memory map is not possible anymore.  
+The problem was solved in wiringPi and RPi.GPIO by reading via /sys/class/gpio/gpioX/value in that case.
 
 
 ## Measurements
